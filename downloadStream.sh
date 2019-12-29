@@ -2,9 +2,11 @@
 
 function downloadStream()
 {
+    # Does the actual downloading
     ffmpeg -i "$streamURL" -c copy -bsf:a aac_adtstoasc "$outputFileName.mp4"
 }
 
+# Copied from other repo ... more to help pause the screen, for debugging
 function userPrompt()
 {
   read -p "Press [Enter] to continue "
