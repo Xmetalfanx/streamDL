@@ -1,3 +1,6 @@
+#!/bin/bash
+
+
 # https://windowsloop.com/download-m3u8-video-with-ffmpeg/
 
 function downloadStream()
@@ -20,8 +23,9 @@ function main()
     read -p "Stream URL: " streamURL
 
     read -p "Is this a TV program?(y/n)" tvAnswer
-    case $tvAnswer in  
-        [Yy])  
+
+    case $tvAnswer in
+        [Yy])
             read -p "Show Name: " showName
             read -p "Season: " seasonNum
             read -p "Episode Number: " episodeNum
