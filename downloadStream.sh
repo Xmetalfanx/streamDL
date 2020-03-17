@@ -32,7 +32,7 @@ function main()
 
             outputFileName="${showName}S${seasonNum}Ep${episodeNum}"
 
-            echo $outputFileName
+            echo "$outputFileName"
             userPrompt
 
         ;; 
@@ -45,7 +45,7 @@ function main()
 
     esac 
 
-     downloadStream $streamURL $outputFileName
+     downloadStream "$streamURL" "$outputFileName"
 }
 
 main
