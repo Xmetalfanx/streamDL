@@ -3,21 +3,18 @@
 
 # https://windowsloop.com/download-m3u8-video-with-ffmpeg/
 
-function downloadStream()
-{
+function downloadStream() {
     # Does the actual downloading
     ffmpeg -i "$streamURL" -c copy -bsf:a aac_adtstoasc "$outputFileName.mp4"
 }
 
 # Copied from other repo ... more to help pause the screen, for debugging
-function userPrompt()
-{
+function userPrompt() {
   read -p "Press [Enter] to continue "
 }
 
 # Main function
-function main()
-{
+function main() {
     clear
     echo -e "This will (hopefully) Download streaming media into a mp4 file"
     read -p "Stream URL: " streamURL
